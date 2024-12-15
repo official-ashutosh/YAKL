@@ -1,13 +1,13 @@
-# Yet Another Key Logger (YAKL)
+# Yet Another Key Logger (YAKL) 📟
 
 Welcome to **YAKL** – A Simple Keylogger Built Using Windows API!
 
-## What is YAKL?  
+## What is YAKL? 📚
 **YAKL** (Yet Another Key Logger) is a basic keylogger designed to monitor and record keystrokes on Windows systems using the Windows API. This project is intended for educational purposes to demonstrate how keylogging mechanisms function and how Windows APIs can be used for low-level system interactions.
 
 ---
 
-## Key Features
+## Key Features 🧷
 
 - **Windows API Integration:** Uses native Windows APIs to hook into keyboard input.
 - **Real-time Keystroke Logging:** Logs each keypress and stores it in a local file.
@@ -17,7 +17,7 @@ Welcome to **YAKL** – A Simple Keylogger Built Using Windows API!
 
 ---
 
-## How Does It Work?
+## How Does It Work? 📚
 
 YAKL hooks into the Windows API and listens for keyboard events using the `SetWindowsHookEx` function. Once a key is pressed, it captures the keystroke and logs it to a file. The keylogger operates in the background, meaning the user won't know it's running unless the system is actively being monitored.
 
@@ -25,7 +25,7 @@ YAKL hooks into the Windows API and listens for keyboard events using the `SetWi
 
 ---
 
-## Prerequisites
+## Prerequisites 🧾
 
 Before you can run YAKL, ensure that you have the following prerequisites:
 
@@ -37,7 +37,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 
 ---
 
-## How to Build
+## How to Build 🔨
 
 1. **Clone the Repository:**
    ```bash
@@ -55,7 +55,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 
 ---
 
-## How to Use
+## How to Use 🧷
 
 1. **Start the Keylogger:**
    - After running the executable, YAKL will start monitoring keystrokes.
@@ -66,7 +66,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 
 ---
 
-## Key API Functions Used
+## Key API Functions Used 🚀
 
 - `SetWindowsHookEx`: Hooks into keyboard events to capture keypresses.
 - `CallNextHookEx`: Passes the keystroke information to the next hook procedure.
@@ -74,7 +74,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 
 ---
 
-## Important Notes
+## Important Notes 🧾
 
 - **Ethical Usage:** This project is intended for educational purposes to explore how keyloggers work and how they can be prevented. Do not use this software for malicious activities.
 - **Permissions:** Running this keylogger may require elevated privileges depending on system security settings.
@@ -92,7 +92,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 
 ---
 
-## Contributing
+## Contributing 📝
 
 This project is open to contributions! If you have an idea to improve the project, feel free to open an issue or create a pull request.
 
@@ -102,6 +102,16 @@ This project is open to contributions! If you have an idea to improve the projec
 3. Commit your changes.
 4. Push to your fork and create a pull request.
 
+### PR Template 
+
+```markdown
+Issue: #
+
+Short description of what this resolves:
+
+Changes proposed in this pull request and/or Screenshots of changes:
+```
+
 ---
 
 ## License
@@ -110,7 +120,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Disclaimer
+## Disclaimer ⚠️
 
 **YAKL** is a demonstration tool for educational purposes only. Misuse of this software could lead to legal consequences. Use responsibly and ensure you are complying with all local laws and regulations.
 
