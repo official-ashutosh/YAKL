@@ -32,7 +32,7 @@ Before you can run YAKL, ensure that you have the following prerequisites:
 - **Operating System:** Windows (Windows 7, 8, 10, or 11)
 - **Development Environment:**
   - Visual Studio (Recommended)
-  - C++ Compiler
+  - C++ Compiler (MSVC)
   - Windows SDK for API integration
 
 ---
