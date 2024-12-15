@@ -106,6 +106,18 @@ This project is open to contributions! If you have an idea to improve the projec
 3. Commit your changes.
 4. Push to your fork and create a pull request.
 
+### 📁 Directory Structure
+
+```bash
+.
+├─ 📁 Project Folder
+    ├── 📁 build
+    ├── 📁 include
+    ├── 📁 lib
+    ├── 📁 src
+    └── 📄 README.md
+```
+
 ### PR Template 
 
 ```markdown
