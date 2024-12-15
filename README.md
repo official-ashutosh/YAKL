@@ -1,3 +1,7 @@
+
+![YAKL logo](YAKL.png)
+
+
 # Yet Another Key Logger (YAKL) :trollface:
 
 Welcome to **YAKL** – A Simple Keylogger Built Using Windows API!
