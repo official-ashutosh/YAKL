@@ -3,7 +3,7 @@
 
 #include <fstream>
 #include <string>
-#include <mutex>
+#include <mutex>  // Include mutex for thread safety
 
 class Logger {
 private:
@@ -12,10 +12,10 @@ private:
     bool isLoggingEnabled;        // Toggle for logging
 
 public:
-    Logger();                     // Constructor
+    Logger(const std::string& logFilePath = "log.txt");  // Constructor with optional log file path
     ~Logger();                    // Destructor
 
-    void logKey(const std::string& key);   // Log a single key
+    void logKey(const std::string& key);   // Log a single key (string)
     void toggleLogging(bool enable);      // Enable or disable logging
 };
 

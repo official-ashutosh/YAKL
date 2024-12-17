@@ -3,11 +3,11 @@
 #include <iomanip>
 #include <ctime>
 
-Logger::Logger() : isLoggingEnabled(true) {
-    // Open log.txt in append mode
-    logFile.open("log.txt", std::ios::app);
+Logger::Logger(const std::string& logFilePath) : isLoggingEnabled(true) {
+    // Open the specified log file in append mode
+    logFile.open(logFilePath, std::ios::app);
     if (!logFile.is_open()) {
-        std::cerr << "Error: Unable to open log.txt for logging.\n";
+        std::cerr << "Error: Unable to open " << logFilePath << " for logging.\n";
     }
 }
 
@@ -22,7 +22,7 @@ void Logger::logKey(const std::string& key) {
         return;
     }
 
-    std::lock_guard<std::mutex> guard(logMutex);
+    std::lock_guard<std::mutex> guard(logMutex);  // Ensures thread safety
 
     // Append a timestamp with the logged key
     std::time_t now = std::time(nullptr);
@@ -34,5 +34,5 @@ void Logger::logKey(const std::string& key) {
 }
 
 void Logger::toggleLogging(bool enable) {
-    isLoggingEnabled = enable;
+    isLoggingEnabled = enable;  // Toggle logging on/off
 }
